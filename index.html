@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TypeFast Pro</title>
+  <link rel="stylesheet" href="sstyle.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1 class="title">TypeFast Pro</h1>
+
+    <div class="time-selector">
+      <label for="timeSelect">Select Time:</label>
+      <select id="timeSelect">
+        <option value="15">15s</option>
+        <option value="30" selected>30s</option>
+        <option value="60">60s</option>
+        <option value="120">120s</option>
+      </select>
+    </div>
+
+    <div id="wordsDisplay" class="words-display">Loading words...</div>
+    <input id="typingInput" type="text" placeholder="Start typing..." disabled />
+
+    <div class="stats">
+      <div class="stat">
+        <p class="label">Time Left</p>
+        <p id="timeLeft" class="value">30</p>
+      </div>
+      <div class="stat">
+        <p class="label">WPM</p>
+        <p id="wpm" class="value">0</p>
+      </div>
+      <div class="stat">
+        <p class="label">Accuracy</p>
+        <p id="accuracy" class="value">100%</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn start">Start</button>
+      <button id="restartBtn" class="btn restart">Restart</button>
+    </div>
+  </div>
+
+  <div id="resultsModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Results</h2>
+      <p><strong>WPM:</strong> <span id="finalWpm">0</span></p>
+      <p><strong>Accuracy:</strong> <span id="finalAccuracy">0%</span></p>
+      <p><strong>Characters:</strong> <span id="finalChars">0</span></p>
+      <p><strong>Consistency:</strong> <span id="finalConsistency">0%</span></p>
+      <canvas id="wpmChart"></canvas>
+      <button id="closeModal" class="btn">Close</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
