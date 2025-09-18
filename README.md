@@ -39,7 +39,7 @@ Hosting / Deployment: Vercel
 
 
 
-💡 Usage / How to Run Locally
+{💡 Usage / How to Run Locally }
 
 Clone the repo:
 
